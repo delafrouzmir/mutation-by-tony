@@ -1,1 +1,6 @@
-void inspect(char *old, char *new, int me, int master);
+#ifndef _INSPECT_H
+#define _INSPECT_H 1
+
+void inspect(char *old, char *nova, int me, int master);
+
+#endif  /* _INSPECT_H */

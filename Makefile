@@ -1,14 +1,15 @@
-CC	=	oshcc
-STRICT	=	-Wall -Wextra -pedantic
-DEBUG	=	-ggdb
-OPT	=	-O3
-CFLAGS	=	$(STRICT) $(DEBUG) $(OPT)
-LD	=	$(CC)
-LDFLAGS	=	$(DEBUG) $(OPT)
-LIB	=
+CXX		=	oshcxx
+CONFORM		=	-std=c++11
+STRICT		=	-Wall -Wextra -pedantic
+DEBUG		=	-ggdb
+OPT		=	-O3
+CXXFLAGS	=	$(CONFORM) $(STRICT) $(DEBUG) $(OPT)
+LD		=	$(CXX)
+LDFLAGS		=	$(DEBUG) $(OPT)
+LIB		=
 
-SOURCES =	$(wildcard *.c)
-OBJECTS =	$(SOURCES:.c=.o)
+SOURCES		=	$(wildcard *.cc)
+OBJECTS		=	$(SOURCES:.cc=.o)
 
 .PHONY:	all	tidy	clean
 
