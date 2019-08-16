@@ -1,8 +1,9 @@
 #include "options.h"
 
 #include <stdio.h>
-#include <stddef.h>
-#include <stdlib.h>
+
+#include <cstddef>
+#include <cstdlib>
 
 #include <shmem.h>
 
