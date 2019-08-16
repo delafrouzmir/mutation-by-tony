@@ -10,16 +10,17 @@ LIB		=
 
 SOURCES		=	$(wildcard *.cc)
 OBJECTS		=	$(SOURCES:.cc=.o)
+TARGET		=	mut
 
 .PHONY:	all	tidy	clean
 
-all:	mut
+all:	$(TARGET)
 
-mut:	$(OBJECTS)
+$(TARGET):	$(OBJECTS)
 	$(LD) $(LDFLAGS) -o $@ $^ $(LIBS)
 
 tidy:
 	rm -f $(OBJECTS)
 
 clean:	tidy
-	rm -f mut
+	rm -f $(TARGET)
