@@ -5,7 +5,7 @@ typedef struct cli {
     size_t exposures;
     size_t seqlen;
     size_t wrap;
-    int verbose;
+    bool verbose;
 } cli_t;
 
 extern cli_t cli;
