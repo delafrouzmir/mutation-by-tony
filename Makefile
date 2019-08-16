@@ -6,7 +6,7 @@ OPT		=	-O3
 CXXFLAGS	=	$(CONFORM) $(STRICT) $(DEBUG) $(OPT)
 LD		=	$(CXX)
 LDFLAGS		=	$(DEBUG) $(OPT)
-LIB		=
+LIBS		=
 
 SOURCES		=	$(wildcard *.cc)
 OBJECTS		=	$(SOURCES:.cc=.o)
