@@ -110,9 +110,9 @@ static void
 hr(void)
 {
     for (size_t i = 0; i < cli.wrap; ++i) {
-        printf("-");
+        putchar('-');
     }
-    printf("\n");
+    putchar('\n');
 }
 
 void
