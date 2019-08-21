@@ -7,13 +7,16 @@
 
 #include <shmem.h>
 
+static const char *bold_yellow = "\033[1;33m";
+static const char *reset       = "\033[0m";
+
 //
 // mark changes
 //
 static void
 highlight(char c)
 {
-    printf("\033[1;33m" "%c" "\033[0m", c);
+    printf("%s%c%s", bold_yellow, c, reset);
 }
 
 void
