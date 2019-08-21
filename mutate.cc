@@ -46,10 +46,10 @@ init_seq(char *old, char *nova, int me, int master)
 // hit sequence with mutations
 //
 void
-mutate(char *nova, int pe, int master)
+mutate(char *nova, int me, int master)
 {
     // pepper MASTER copy with mutations
-    if (pe != master) {
+    if (me != master) {
         for (size_t i = 0; i < cli.exposures; ++i) {
             if ((rand() % cli.resilience) == 0) {
                 const char nova_base = rand_base();
