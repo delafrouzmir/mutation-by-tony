@@ -29,6 +29,8 @@ static std::unordered_map<char, const char *> desc = {
     { 'v', "include change listing at end" }
 };
 
+static const int padding = 18;  // formatting width pad
+
 static void
 bail(void)
 {
@@ -49,7 +51,7 @@ bail(void)
                 takes ? "N" : " " ,
                 op->name,
                 takes ? "=N" : "  ",
-                18 - n, " ",
+                padding - n, " ",
                 desc[c]);
         ++op;
     }
