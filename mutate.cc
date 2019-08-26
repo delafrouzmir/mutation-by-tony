@@ -17,12 +17,20 @@ static const size_t nbases = sizeof(bases) / sizeof(bases[0]);
 //
 // give me a random base
 //
-static inline char   rand_base(void)  { return bases[rand() % nbases]; }
+static inline char
+rand_base(void)
+{
+    return bases[rand() % nbases];
+}
 
 //
 // give me a random index into the sequence
 //
-static inline size_t rand_index(void) { return rand() % cli.seqlen;   }
+static inline size_t
+rand_index(void)
+{
+    return rand() % cli.seqlen;
+}
 
 //
 // populate a sequence and make a copy
